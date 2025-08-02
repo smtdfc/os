@@ -1,20 +1,22 @@
 [BITS 16]
 [ORG 0x7C00]
 
+hello: db 'H', 'e', 'l', 'l', 'o', 0
 
-mov ah, 0x0e ; tty mode
-mov al, 'H'
-int 0x10
-mov al, 'e'
-int 0x10
-mov al, 'l'
-int 0x10
-int 0x10
-mov al, 'o'
-int 0x10
+start:
+  mov si, hello
 
-jmp $
+.loop:
+  lodsb
+  cmp al, 0
+  je .hang
 
-; padding and magic number
+  mov ah, 0x0e
+  int 0x10
+  jmp .loop
+
+.hang:
+  jmp $
+
 times 510 - ($-$$) db 0
-dw 0xaa55 
+dw 0xAA55
