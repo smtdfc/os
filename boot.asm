@@ -4,6 +4,8 @@
 hello: db 'H', 'e', 'l', 'l', 'o', 0
 
 start:
+xor ax, ax
+  mov ds, ax
   mov si, hello
 
 .loop:
