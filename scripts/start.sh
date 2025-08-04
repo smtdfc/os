@@ -17,11 +17,10 @@ fi
 
 echo "[*] Booting your custom OS with QEMU..."
 qemu-system-x86_64 \
-    -kernel "$KERNEL" \
-    -initrd "$INITRD" \
-    -m 512M \
-    -nographic \
-    -append "console=ttyS0 earlyprintk=serial"
-
-
+  -kernel "$KERNEL" \
+  -initrd "$INITRD" \
+  -m 1G \
+  -serial mon:stdio \
+  -append "console=ttyS0 earlyprintk=serial init=/init"
+  
 echo "[✓] Shutdown complete!"
