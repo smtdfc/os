@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-source scrips/utils.sh
+source scripts/utils.sh
 
 bash scripts/kernel/build.sh
 bash scripts/busybox/build.sh

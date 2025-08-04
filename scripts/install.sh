@@ -1,5 +1,5 @@
 #!/bin/bash
-source scrips/utils.sh
+source scripts/utils.sh
 set -e
 
 BUSYBOX_VER="1.36.1"

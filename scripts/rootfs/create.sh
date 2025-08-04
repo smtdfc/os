@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source scrips/utils.sh
+source scripts/utils.sh
 set -e
 
 step "Creating Root Filesystem"
