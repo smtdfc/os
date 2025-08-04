@@ -2,7 +2,7 @@
 set -e
 source scripts/utils.sh
 
-KERNEL="build/kernel/bzImage"
+KERNEL="build/kernel"
 INITRD="build/rootfs.cpio.gz"
 
 if [ ! -f "$KERNEL" ]; then
