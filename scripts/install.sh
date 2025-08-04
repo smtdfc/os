@@ -19,7 +19,7 @@ function clone_kernel() {
         return
     fi
 
-    git clone --depth=1 --branch "v$KERNEL_VERSION" "$KERNEL_REPO" "$KERNEL_DIR"
+    git clone --depth=1 "$KERNEL_REPO" "$KERNEL_DIR"
 
     echo "[✓] Linux kernel v$KERNEL_VERSION cloned successfully!"
 }

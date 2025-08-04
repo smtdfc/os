@@ -4,6 +4,6 @@ set -e
 
 step "Init Linux Kernel"
 cd linux
-make tidyconfig
+make tinyconfig
 cp .config ../configs/kernel.config
 cd ..
