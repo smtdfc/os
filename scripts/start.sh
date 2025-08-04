@@ -20,7 +20,10 @@ qemu-system-x86_64 \
   -kernel "$KERNEL" \
   -initrd "$INITRD" \
   -m 1G \
+  -nographic \
+  -display none \
   -serial mon:stdio \
   -append "console=ttyS0 earlyprintk=serial init=/init"
-  
+ 
+ 
 echo "[✓] Shutdown complete!"
