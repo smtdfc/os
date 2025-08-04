@@ -1,5 +1,5 @@
 #!/bin/bash
-source ../utils.sh
+source scrips/utils.sh
 set -e
 
 

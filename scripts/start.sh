@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+source scrips/utils.sh
 
 KERNEL="build/kernel/bzImage"
 INITRD="build/rootfs.cpio.gz"

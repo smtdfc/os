@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
+source scrips/utils.sh
 
-sh scripts/kernel/build.sh
-sh scripts/busybox/build.sh
+bash scripts/kernel/build.sh
+bash scripts/busybox/build.sh
 
 echo "[✓] Build completed successfully!"

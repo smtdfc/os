@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+source scrips/utils.sh
 
-sh scripts/kernel/init.sh
-sh scripts/busybox/init.sh
+bash scripts/kernel/init.sh
+bash scripts/busybox/init.sh
