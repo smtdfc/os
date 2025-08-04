@@ -1,0 +1,5 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+echo -e "\n🔥 Welcome to smtdfcOS 🔥"
+exec /bin/sh

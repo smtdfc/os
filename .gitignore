@@ -1,0 +1,23 @@
+
+linux/
+busybox-*/
+# build artifacts
+build/
+*.o
+*.out
+*.elf
+*.img
+*.gz
+*.cpio
+*.bin
+*.log
+*.iso
+
+# source folders unpacked
+linux/
+busybox-*/
+
+# temp
+tempfs/
+
+
