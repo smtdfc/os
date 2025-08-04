@@ -12,7 +12,7 @@ chmod +x rootfs/bin/busybox
 
 pushd rootfs/bin > /dev/null
 for cmd in $(./busybox --list); do
-  ln -s busybox $cmd
+  ln -sf busybox "$cmd"
 done
 popd > /dev/null
 
