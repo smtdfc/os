@@ -5,5 +5,3 @@ qemu-system-x86_64 \
   -initrd build/init.cpio \
   -nographic \
   -append "console=ttyS0 init=/init"
-
-

@@ -1,0 +1,1 @@
+cp -av ./busybox/_install/* ./initramfs
