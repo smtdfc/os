@@ -1,13 +1,13 @@
-#!/bin/sh
+#!/bin/busybox sh
 
-mkdir -p /dev /proc /sys /tmp
-
-mount -t devtmpfs devtmpfs /dev
+# Mount các thư mục ảo cần thiết cho shell
 mount -t proc none /proc
 mount -t sysfs none /sys
+mount -t devtmpfs none /dev || mknod -m 622 /dev/console c 5 1
 
-echo ">> INIT script started"
-ls /
+# In ra chút cho vui
+echo "[+] Welcome to smtdfcOS 🤡"
+echo "[+] Starting BusyBox shell..."
 
-echo "Welcome to smtdfcOS"
-exec /bin/sh
+# Chạy shell
+exec /bin/busybox sh
