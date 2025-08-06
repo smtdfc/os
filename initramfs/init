@@ -1,0 +1,10 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+mount -t devtmpfs none /dev
+
+[ -c /dev/console ] || mknod -m 600 /dev/console c 5 1
+[ -c /dev/null ] || mknod -m 666 /dev/null c 1 3
+
+echo "Welcome to smtdfcOS"
+exec /bin/sh < /dev/console > /dev/console 2>&1

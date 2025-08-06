@@ -15,7 +15,7 @@ build/
 
 # source folders unpacked
 linux/
-busybox-*/
+busybox*/
 
 # temp
 tempfs/
