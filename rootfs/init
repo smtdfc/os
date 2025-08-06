@@ -1,0 +1,13 @@
+#!/bin/sh
+
+mkdir -p /dev /proc /sys /tmp
+
+mount -t devtmpfs devtmpfs /dev
+mount -t proc none /proc
+mount -t sysfs none /sys
+
+echo ">> INIT script started"
+ls /
+
+echo "Welcome to smtdfcOS"
+exec /bin/sh

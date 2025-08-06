@@ -22,7 +22,11 @@ qemu-system-x86_64 \
   -m 2G \
   -nographic \
   -serial mon:stdio \
+<<<<<<< HEAD
   -append "console=ttyS0 earlyprintk=serial init=/linuxrc"
+=======
+  -append "console=ttyS0 earlyprintk=serial init=/bin/sh"
+>>>>>>> refs/remotes/origin/main
  
  
 echo "[✓] Shutdown complete!"
