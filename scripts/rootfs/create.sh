@@ -6,18 +6,12 @@ set -e
 step "Creating Root Filesystem"
 mkdir -p rootfs/{bin,sbin,etc,proc,sys,usr/bin,usr/sbin,dev}
 
-# Copy BusyBox
-cp build/busybox rootfs/bin/
-chmod +x rootfs/bin/busybox
+cd busybox-1.36.1 
+make -j2 install 
+cd ..
+cp -av ./busybox-1.36.1/_install/* ./rootfs
 
-pushd rootfs/bin > /dev/null
-for cmd in $(./busybox --list); do
-  ln -sf busybox "$cmd"
-done
-popd > /dev/null
-
-
-chmod +x rootfs/init
+chmod +x rootfs/linuxrc
 
 # Build cpio
 cd rootfs
