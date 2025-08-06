@@ -24,4 +24,5 @@ tempfs/
 !config/*
 !initramfs
 !initramfs/*
-
+!scripts
+!scripts/*
