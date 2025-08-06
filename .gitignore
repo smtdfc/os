@@ -20,4 +20,5 @@ busybox*/
 # temp
 tempfs/
 
-
+!config
+!config/*
