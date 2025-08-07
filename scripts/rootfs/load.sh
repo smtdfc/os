@@ -1,1 +1,1 @@
-cp -av ./busybox/_install/* ./initramfs
+cp -av ./busybox/_install/* ./rootfs
