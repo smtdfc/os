@@ -23,3 +23,4 @@ grep EXTRAVERSION "$MAKEFILE_PATH"
 echo "Building Kernel"
 make -j$(nproc)
 
+cp ./arch/x86/boot/bzImage ../build/bzImage
