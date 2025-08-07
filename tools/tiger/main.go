@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	//os.Setenv("TIGER_REGISTRY_HOST", "http://localhost:3000")
+	os.Setenv("TIGER_REGISTRY_HOST", "https://tiger-registry.onrender.com")
 	app := &cli.App{
 		Name:  "tiger",
 		Usage: "Package manager for smtdfc OS",

@@ -1,3 +1,6 @@
+#!/bin/sh
+set -e
+
 qemu-system-x86_64 \
   -cdrom build/smtdfc_os.iso \
   -nographic \

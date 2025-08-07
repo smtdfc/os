@@ -1,3 +1,5 @@
+#!/bin/sh
+set -e
 
 echo "Booting smtdfc OS"
 qemu-system-x86_64 \

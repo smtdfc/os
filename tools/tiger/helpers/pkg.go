@@ -81,7 +81,7 @@ func DownloadPkg(pkg PkgMetadata) error {
 		return fmt.Errorf("download failed: status %d, response: %s", resp.StatusCode, string(body))
 	}
 
-	outputDir := filepath.Join("downloads", pkg.Name)
+	outputDir := filepath.Join("pkg", pkg.Name)
 	if err := os.MkdirAll(outputDir, 0755); err != nil {
 		return fmt.Errorf("failed to create output dir: %v", err)
 	}

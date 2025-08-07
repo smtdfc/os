@@ -12,7 +12,8 @@ build/
 *.bin
 *.log
 *.iso
-bzImage
+iso/boot/bzImage
+iso/boot/init.cpio
 
 # source folders unpacked
 linux/
@@ -21,7 +22,10 @@ busybox*/
 # temp
 tempfs/
 
+rootfs/*
 dist/*
+
+!rootfs/init
 !config
 !config/*
 !initramfs

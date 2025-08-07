@@ -33,7 +33,7 @@ echo "                                              "
 
 echo -e "\033[1;32mWelcome to smtdfcOS (GNU/Linux 6.16.0-smtdfcOS x86_64)\033[0m"
 echo
-echo -e " * Author:  \033[1;34mhttps://smtdfc.is-a.dev\033[0m"
+echo -e " * Author:         \033[1;34mhttps://smtdfc.is-a.dev\033[0m"
 echo -e " * Report issues:  \033[1;34mhttps://github.com/smtdfc/os/issues\033[0m"
 echo -e " * Donate:         \033[1;34mhttps://ko-fi.com/smtdfc\033[0m"
 echo

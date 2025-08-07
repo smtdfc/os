@@ -1,3 +1,6 @@
+#!/bin/sh
+set -e
+
 echo "Copying artifacts"
 cp ./build/bzImage ./iso/boot/
 cp ./build/init.cpio ./iso/boot/
