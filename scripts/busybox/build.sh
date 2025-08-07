@@ -1,4 +1,4 @@
-cd linux
+cd busybox
 
 echo "Loading config "
 cp ../config/linux/.config ./.config
