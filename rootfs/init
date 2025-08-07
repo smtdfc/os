@@ -15,6 +15,8 @@ mount -t devpts devpts /dev/pts
 
 exec >/dev/ttyS0 2>&1 </dev/ttyS0
 
+export TIGER_REGISTRY_HOST="https://tiger-registry.onrender.com"
+
 ip addr add 10.0.2.15/24 dev eth0
 ip link set eth0 up
 ip route add default via 10.0.2.2
