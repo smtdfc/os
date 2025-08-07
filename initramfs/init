@@ -37,6 +37,34 @@ echo -e " * Donate:         \033[1;34mhttps://ko-fi.com/smtdfc\033[0m"
 echo
 echo "  Last login: $(date) from $(ip route get 1 | awk '{print $NF; exit}')"
 
+# Mount and switch root
+if [ -b /dev/vda ]; then
+  echo "[+] Found /dev/vda, preparing persistent rootfs..."
 
+  mkdir -p /mnt/root
+
+  # Format disk
+  if ! blkid /dev/vda | grep -q ext4; then
+    echo "[*] Formatting /dev/vda as ext4..."
+    mkfs.ext4 -F /dev/vda
+  fi
+
+  mount /dev/vda /mnt/root
+
+  if [ ! -f /mnt/root/.initialized ]; then
+    echo "[*] Copying rootfs to /dev/vda..."
+    cp -a /bin /sbin /etc /lib /lib64 /usr /dev /proc /sys /mnt/root
+    touch /mnt/root/.initialized
+    echo "[✓] Rootfs installed on /dev/vda"
+  fi
+
+  umount /mnt/root/dev || true
+  umount /mnt/root/proc || true
+  umount /mnt/root/sys || true
+
+  echo "[✓] Switching to real root..."
+  exec switch_root /mnt/root /sbin/init
+fi
+
+echo "[!] No persistent disk found. Booting into RAM only (initramfs mode)."
 exec setsid cttyhack sh
-exec setsid /bin/sh -i
