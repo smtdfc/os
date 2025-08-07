@@ -12,6 +12,7 @@ build/
 *.bin
 *.log
 *.iso
+bzImage
 
 # source folders unpacked
 linux/
