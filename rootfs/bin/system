@@ -1,5 +1,6 @@
 #!/bin/sh
 
+set -x
 COMMAND_NAME=$(basename "$0")
 
 if [ "$COMMAND_NAME" = "adduser" ]; then
