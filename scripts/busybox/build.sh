@@ -1,7 +1,7 @@
 cd busybox
 
 echo "Loading config "
-cp ../config/linux/.config ./.config
+cp ../config/busybox/.config ./.config
 
 make oldconfig
 
