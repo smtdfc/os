@@ -53,6 +53,11 @@ Continue by compiling BusyBox:
 bash script/busybox/build.sh
 ```
 
+### Build tools and package manager
+```bash
+bash script/tool/build.sh
+```
+
 ### Initialize RootFS
 To be able to boot the operating system, we need a root filesystem (rootfs) initialized as an initramfs for the system to boot. Initialize it by running:
 ```bash
