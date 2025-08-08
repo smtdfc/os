@@ -1,6 +1,6 @@
 # smtdfc OS
 
- After dedicating several days to in-depth research on the Linux Kernel, I have developed this project. Although I am not a specialist in C/C++ and possess only a fundamental understanding of operating systems and the inner workings of the Linux kernel, I have nonetheless contributed by creating several supplementary tools and a package manager. These additions were implemented using Golang, my preferred programming language, to enhance and extend the functionality of the project.
+ After dedicating several days to research on the Linux Kernel, I have developed this project. Although I am not a specialist in C/C++ and possess only a fundamental understanding of operating systems and the inner workings of the Linux kernel, I have nonetheless contributed by creating several supplementary tools and a package manager. These additions were implemented using Golang, my preferred programming language, to enhance and extend the functionality of the project.
  
 ### Requirements
 Before you begin, ensure your system meets the following requirements:
